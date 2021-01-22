@@ -85,7 +85,7 @@ export const appMachine = Machine({
                     },
                 },
                 success: {},
-                fail: {},
+                failed: {},
             },
         },
     },
@@ -93,5 +93,8 @@ export const appMachine = Machine({
         LOGIN: {
             target: "auth.started",
         },
+        LOAD_STORIES: {
+            target: 'list.loading'
+        }
     },
 });
